@@ -1,0 +1,11 @@
+<mat-card class="mat-elevation-z4">
+  <mat-card-title-group>
+    <mat-card-title>{{ book.title }}</mat-card-title>
+    <mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+    <img mat-card-sm-image [src]="book.book_image" />
+  </mat-card-title-group>
+
+  <mat-card-content>
+    <p>{{ book.description }}</p>
+  </mat-card-content>
+</mat-card>
