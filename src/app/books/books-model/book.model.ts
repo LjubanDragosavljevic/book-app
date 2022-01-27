@@ -3,4 +3,6 @@ export interface Book {
   author: string;
   description: string;
   book_image: string;
+  amazon_product_url: string;
+  url: string;
 }

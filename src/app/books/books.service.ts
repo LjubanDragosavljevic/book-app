@@ -1,12 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, delay } from 'rxjs/operators';
-import { Book } from './book/book.model';
-
-const API_URL =
-  'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json';
-const API_KEY = 'dVh2I4dlVdJYaXYaOFYtHhkGYISksZFo';
+import { API_URL, PARAMS } from './books-config/books.config';
+import { GetBooksResponse } from './books-model/books.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,15 +10,7 @@ const API_KEY = 'dVh2I4dlVdJYaXYaOFYtHhkGYISksZFo';
 export class BooksService {
   constructor(private readonly http: HttpClient) {}
 
-  getBooks(): Observable<Book[]> {
-    return this.http
-      .get<{ results: { books: Book[] } }>(API_URL, {
-        params: { 'api-key': API_KEY },
-      })
-      .pipe(
-        map(({ results }) => results.books),
-        // add delay to simulate slower network
-        delay(2000)
-      );
+  public getBooks(): Observable<GetBooksResponse> {
+    return this.http.get<GetBooksResponse>(API_URL, PARAMS);
   }
 }

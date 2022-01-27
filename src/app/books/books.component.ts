@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from './books.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-books',
@@ -7,9 +8,13 @@ import { BooksService } from './books.service';
   styleUrls: ['./books.component.scss'],
 })
 export class BooksComponent implements OnInit {
-  readonly books$ = this.booksService.getBooks();
+  books$: any;
 
-  constructor(private readonly booksService: BooksService) {}
+  constructor(private booksService: BooksService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.books$ = this.booksService
+      .getBooks()
+      .pipe(map(({ results }) => results.books));
+  }
 }

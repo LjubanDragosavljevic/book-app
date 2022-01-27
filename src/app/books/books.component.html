@@ -1,6 +1,11 @@
-<mat-toolbar color="primary">Books</mat-toolbar>
+<section><mat-toolbar color="primary">Books</mat-toolbar></section>
 
-<div *ngIf="books$ | async as books; else loading" class="book-list">
+<div
+  *ngIf="books$ | async as books; else loading"
+  class="book-list"
+  fxLayout="column"
+  fxLayoutGap="1rem"
+>
   <app-book *ngFor="let book of books" [book]="book"></app-book>
 </div>
 
