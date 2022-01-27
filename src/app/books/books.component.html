@@ -1,7 +1,7 @@
 <section><mat-toolbar color="primary">Books</mat-toolbar></section>
 
 <div
-  *ngIf="books$ | async as books; else loading"
+  *ngIf="this.books; else loading"
   class="book-list"
   fxLayout="column"
   fxLayoutGap="1rem"
