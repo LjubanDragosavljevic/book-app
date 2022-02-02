@@ -1,4 +1,4 @@
-<mat-card class="mat-elevation-z4">
+<mat-card class="mat-elevation-z4" (click)="onClick()">
   <mat-card-title-group>
     <mat-card-title>{{ book?.title }}</mat-card-title>
     <mat-card-subtitle>{{ book?.author }}</mat-card-subtitle>
@@ -6,7 +6,9 @@
   </mat-card-title-group>
 
   <mat-card-content>
+    <p>{{ book?.buy_links.name }}</p>
     <p>{{ book?.description }}</p>
+    <p>{{ book?.primary_isbn10 }}</p>
     <a [attr.href]="book?.amazon_product_url" target="_blank"
       >Buy on Amazone
     </a>

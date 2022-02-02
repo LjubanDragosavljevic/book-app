@@ -7,8 +7,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BookComponent } from './book/book.component';
 import { BooksComponent } from './books.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MoreInfoComponent } from './book/more-info/more-info.component';
 
-export const MATERIAL_MODULES = [
+const MATERIAL_MODULES = [
   MatCardModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
@@ -16,7 +17,7 @@ export const MATERIAL_MODULES = [
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, MATERIAL_MODULES, FlexLayoutModule],
-  declarations: [BooksComponent, BookComponent],
+  declarations: [BooksComponent, BookComponent, MoreInfoComponent],
   exports: [BooksComponent],
 })
 export class BooksModule {}
