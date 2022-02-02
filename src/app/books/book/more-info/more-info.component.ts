@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { StateService } from '@uirouter/angular';
 import { Book } from '../../books-model/book.model';
+import { UIRouterGlobals } from '@uirouter/angular';
 
 @Component({
   selector: 'app-more-info',
@@ -10,7 +10,7 @@ import { Book } from '../../books-model/book.model';
 export class MoreInfoComponent implements OnInit {
   book: Book | undefined;
 
-  constructor(private stateService: StateService) {
+  constructor(private stateService: UIRouterGlobals) {
     this.book = this.stateService.params['obj'];
 
     console.log(this.book);
