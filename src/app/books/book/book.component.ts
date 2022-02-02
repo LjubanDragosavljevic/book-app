@@ -2,8 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Book } from '../books-model/book.model';
 import { StateService } from '@uirouter/angular';
-import { BooksService } from '../books.service';
-import { GetBooksResponse } from '../books-model/books.model';
 
 @Component({
   selector: 'app-book',
@@ -14,10 +12,7 @@ export class BookComponent implements OnInit {
   @Input() book: Book;
   isbn: number;
 
-  constructor(
-    private $state: StateService,
-    private booksService: BooksService
-  ) {}
+  constructor(private $state: StateService) {}
 
   ngOnInit(): void {}
 
