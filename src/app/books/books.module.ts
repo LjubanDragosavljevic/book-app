@@ -8,11 +8,13 @@ import { BookComponent } from './book/book.component';
 import { BooksComponent } from './books.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MoreInfoComponent } from './book/more-info/more-info.component';
+import { MatButtonModule } from '@angular/material/button';
 
 const MATERIAL_MODULES = [
   MatCardModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
+  MatButtonModule,
 ];
 
 @NgModule({
