@@ -19,6 +19,7 @@
       <p>{{ book?.buy_links.name }}</p>
       <p>{{ book?.description }}</p>
       <div class="links-container">
+        <h2>Online Bookstores:</h2>
         <ul *ngFor="let link of this.book.buy_links" [link]="link">
           <li style="font-weight: bold">{{ link?.name }}</li>
           <li>
