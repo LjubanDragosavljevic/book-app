@@ -11,8 +11,15 @@ import { homeState, booksState, moreInfoState } from './router/state';
 import { uiRouterConfigFn } from './router/router.config';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
-const MATERIAL_MODULES = [MatMenuModule, MatButtonModule];
+const MATERIAL_MODULES = [
+  MatMenuModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+];
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavComponent],

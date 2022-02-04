@@ -1,7 +1,13 @@
-<button mat-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item uiSref="home">Home</button>
-  <button mat-menu-item uiSref="books">Books</button>
-</mat-menu>
+<div>
+  <div class="nav-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item uiSref="home" class="mat-menu-btn">Home</button>
+      <button mat-menu-item uiSref="books" class="mat-menu-btn">Books</button>
+    </mat-menu>
+  </div>
 
-<ui-view></ui-view>
+  <ui-view></ui-view>
+</div>

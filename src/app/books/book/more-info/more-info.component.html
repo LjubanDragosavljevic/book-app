@@ -1,3 +1,9 @@
+<section>
+  <mat-toolbar color="primary"
+    ><span class="title-center">Book</span></mat-toolbar
+  >
+  <div></div>
+</section>
 <div *ngIf="this.book; else loading">
   <mat-card class="mat-elevation-z4">
     <mat-card-title-group>
@@ -12,17 +18,17 @@
       <img mat-card-xl-image [src]="book.book_image" />
       <p>{{ book?.buy_links.name }}</p>
       <p>{{ book?.description }}</p>
-      <p>{{ book?.primary_isbn10 }}</p>
-      <ul *ngFor="let link of this.book.buy_links" [link]="link">
-        <li>{{ link?.name }}</li>
-        <li>
-          <a [attr.href]="link?.url" target="_blank">{{ link?.url }}</a>
-        </li>
-      </ul>
+      <div class="links-container">
+        <ul *ngFor="let link of this.book.buy_links" [link]="link">
+          <li style="font-weight: bold">{{ link?.name }}</li>
+          <li>
+            <a [attr.href]="link?.url" target="_blank">{{ link?.url }}</a>
+          </li>
+        </ul>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
--->
 <ng-template #loading>
   <mat-spinner></mat-spinner>
 </ng-template>
