@@ -1,20 +1,28 @@
-<mat-card class="mat-elevation-z4">
-  <mat-card-title-group>
-    <mat-card-title>{{ book?.title }}</mat-card-title>
-    <mat-card-subtitle>{{ book?.author }}</mat-card-subtitle>
-    <button mat-raised-button color="primary" (click)="onClose()">Close</button>
-  </mat-card-title-group>
+<div *ngIf="this.book; else loading">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-title-group>
+      <mat-card-title>{{ book?.title }}</mat-card-title>
+      <mat-card-subtitle>{{ book?.author }}</mat-card-subtitle>
+      <button mat-raised-button color="primary" (click)="onClose()">
+        Close
+      </button>
+    </mat-card-title-group>
 
-  <mat-card-content>
-    <img mat-card-xl-image [src]="book.book_image" />
-    <p>{{ book?.buy_links.name }}</p>
-    <p>{{ book?.description }}</p>
-    <p>{{ book?.primary_isbn10 }}</p>
-    <ul *ngFor="let link of buyLinks" [link]="link">
-      <li>{{ link?.name }}</li>
-      <li>
-        <a [attr.href]="link?.url" target="_blank">{{ link?.url }}</a>
-      </li>
-    </ul>
-  </mat-card-content>
-</mat-card>
+    <mat-card-content>
+      <img mat-card-xl-image [src]="book.book_image" />
+      <p>{{ book?.buy_links.name }}</p>
+      <p>{{ book?.description }}</p>
+      <p>{{ book?.primary_isbn10 }}</p>
+      <ul *ngFor="let link of this.book.buy_links" [link]="link">
+        <li>{{ link?.name }}</li>
+        <li>
+          <a [attr.href]="link?.url" target="_blank">{{ link?.url }}</a>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
+-->
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

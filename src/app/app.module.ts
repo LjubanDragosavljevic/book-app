@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BooksModule } from './books/books.module';
-import { HomePageComponent } from './home-page/home-page.component';
+import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { UIRouterModule } from '@uirouter/angular';
 import { homeState, booksState, moreInfoState } from './router/state';
@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 const MATERIAL_MODULES = [MatMenuModule, MatButtonModule];
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, NavComponent],
+  declarations: [AppComponent, HomeComponent, NavComponent],
   imports: [
     BrowserModule,
     FormsModule,

@@ -10,7 +10,7 @@ import { StateService } from '@uirouter/angular';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
-  isbn: number;
+  isbn: string;
 
   constructor(private $state: StateService) {}
 
@@ -18,6 +18,10 @@ export class BookComponent implements OnInit {
 
   onClick() {
     this.isbn = this.book.primary_isbn10;
-    this.$state.go('books/more-info', { id: this.isbn, obj: this.book });
+    this.$state.go('books/more-info', {
+      id: this.isbn,
+      obj: this.book,
+    });
+    window.scrollTo(0, 0);
   }
 }

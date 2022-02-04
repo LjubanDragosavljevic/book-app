@@ -14,29 +14,29 @@ export class MoreInfoComponent implements OnInit {
   book: Book | undefined;
   books: Book[] | undefined;
   buyLinks: BuyLinks[] | undefined;
-  isbn: number;
+  isbn: string;
   constructor(
     private stateService: UIRouterGlobals,
     private booksService: BooksService,
     private $state: StateService
   ) {
     this.book = this.stateService.params['obj'];
+    this.isbn = this.stateService.params['id'];
     if (this.stateService.params['obj'] === undefined) {
       this.booksService.getBooks().subscribe((result: GetBooksResponse) => {
         this.books = result.results.books;
-        for (this.book of this.books) {
-          return this.book;
-        }
+        console.log(this.books);
+        console.log(this.isbn);
+        this.book = this.books.find(
+          (book) => book.primary_isbn10 === this.isbn
+        );
+        console.log(this.book);
       });
     }
   }
 
-  ngOnInit(): void {
-    this.buyLinks = this.book.buy_links;
-  }
-  ngAfterViewInit(): void {
-    this.buyLinks = this.book.buy_links;
-  }
+  ngOnInit(): void {}
+  ngAfterViewInit(): void {}
   onClose() {
     this.$state.go('books');
   }

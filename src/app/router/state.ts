@@ -1,4 +1,4 @@
-import { HomePageComponent } from '../home-page/home-page.component';
+import { HomeComponent } from '../home/home.component';
 
 import { BooksComponent } from '../books/books.component';
 
@@ -8,7 +8,7 @@ import { Ng2StateDeclaration } from '@uirouter/angular';
 export const homeState: Ng2StateDeclaration = {
   name: 'home',
   url: '/home',
-  component: HomePageComponent,
+  component: HomeComponent,
 };
 
 export const booksState: Ng2StateDeclaration = {
@@ -23,7 +23,7 @@ export const moreInfoState: Ng2StateDeclaration = {
   component: MoreInfoComponent,
   params: {
     id: {
-      type: 'int',
+      type: 'string',
     },
     obj: {
       type: null,
