@@ -11,10 +11,10 @@ import { StateService } from '@uirouter/angular';
   styleUrls: ['./more-info.component.scss'],
 })
 export class MoreInfoComponent implements OnInit {
-  book: Book | undefined;
-  books: Book[] | undefined;
-  buyLinks: BuyLinks[] | undefined;
-  isbn: string;
+  public book: Book | undefined;
+  public books: Book[] | undefined;
+  public buyLinks: BuyLinks[] | undefined;
+  public isbn: string;
   constructor(
     private stateService: UIRouterGlobals,
     private booksService: BooksService,

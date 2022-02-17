@@ -10,7 +10,7 @@ import { StateService } from '@uirouter/angular';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
-  isbn: string;
+  public isbn: string;
 
   constructor(private $state: StateService) {}
 

@@ -10,3 +10,18 @@ mat-spinner {
   flex: 1 1 auto;
   text-align: center;
 }
+
+.search-form {
+  min-width: 50px;
+  max-width: 150px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-form-full-width {
+  width: 100%;
+}
+
+app-book {
+  margin-bottom: 1%;
+}

@@ -10,7 +10,7 @@ import { GetBooksResponse } from './books-model/books.model';
 })
 export class BooksComponent implements OnInit {
   public books: Book[];
-
+  public searchText: string;
   constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {
