@@ -5,19 +5,19 @@ import { MoreInfoComponent } from '../books/book/more-info/more-info.component';
 import { Ng2StateDeclaration } from '@uirouter/angular';
 
 export const bookCard: Ng2StateDeclaration = {
-  name: 'book-card',
+  name: 'books.book-card',
   url: '/books/book-card',
   component: BookComponent,
 };
 
 export const bookTable: Ng2StateDeclaration = {
-  name: 'book-table',
+  name: 'books.book-table',
   url: '/books/book-table',
   component: TableComponent,
 };
 
 export const bookLocalTable: Ng2StateDeclaration = {
-  name: 'book-local-table',
+  name: 'books.book-local-table',
   url: '/books/book-local-table',
   component: TableLocalComponent,
 };
