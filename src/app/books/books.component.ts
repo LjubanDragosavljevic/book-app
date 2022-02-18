@@ -33,7 +33,7 @@ export class BooksComponent implements OnInit {
     this.checkLocalTable();
   }
   checkCards() {
-    if (this.stateUrl === '/books/book-card') {
+    if (this.stateUrl === '/book-card') {
       return this.showCards;
     } else {
       return (this.showCards = !this.showCards);
@@ -41,7 +41,7 @@ export class BooksComponent implements OnInit {
   }
 
   checkTable() {
-    if (this.stateUrl === '/books/book-table') {
+    if (this.stateUrl === '/book-table') {
       return this.showTable;
     } else {
       return (this.showTable = !this.showTable);
@@ -49,7 +49,7 @@ export class BooksComponent implements OnInit {
   }
 
   checkLocalTable() {
-    if (this.stateUrl === '/books/book-local-table') {
+    if (this.stateUrl === '/book-local-table') {
       return this.showLocalTable;
     } else {
       return (this.showLocalTable = !this.showLocalTable);

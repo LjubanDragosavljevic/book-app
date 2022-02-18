@@ -6,7 +6,7 @@ import { Ng2StateDeclaration } from '@uirouter/angular';
 
 export const bookCard: Ng2StateDeclaration = {
   name: 'books.book-card',
-  url: '/books/book-card',
+  url: '/book-card',
   views: {
     bookCard: {
       component: BookComponent,
@@ -16,7 +16,7 @@ export const bookCard: Ng2StateDeclaration = {
 
 export const bookTable: Ng2StateDeclaration = {
   name: 'books.book-table',
-  url: '/books/book-table',
+  url: '/book-table',
   views: {
     bookTable: {
       component: TableComponent,
@@ -26,7 +26,7 @@ export const bookTable: Ng2StateDeclaration = {
 
 export const bookLocalTable: Ng2StateDeclaration = {
   name: 'books.book-local-table',
-  url: '/books/book-local-table',
+  url: '/book-local-table',
   views: {
     bookLocalTable: {
       component: TableLocalComponent,
