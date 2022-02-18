@@ -1,6 +1,10 @@
 <section>
   <mat-toolbar color="primary"
-    ><span class="title-center">Books</span>
+    ><span class="title-center" [hidden]="!showCards">Book Cards</span>
+    <span class="title-center" [hidden]="!showTable">Books Table</span>
+    <span class="title-center" [hidden]="!showLocalTable"
+      >Books Local Table</span
+    >
 
     <!-- Search for book cards component -->
     <form class="search-form" [hidden]="!showCards">
