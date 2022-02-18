@@ -33,26 +33,14 @@ export class BooksComponent implements OnInit {
     this.checkLocalTable();
   }
   checkCards() {
-    if (this.stateUrl === '/book-card') {
-      return this.showCards;
-    } else {
-      return (this.showCards = !this.showCards);
-    }
+    this.showCards = this.stateUrl === '/book-card';
   }
 
   checkTable() {
-    if (this.stateUrl === '/book-table') {
-      return this.showTable;
-    } else {
-      return (this.showTable = !this.showTable);
-    }
+    this.showTable = this.stateUrl === '/book-table';
   }
 
   checkLocalTable() {
-    if (this.stateUrl === '/book-local-table') {
-      return this.showLocalTable;
-    } else {
-      return (this.showLocalTable = !this.showLocalTable);
-    }
+    this.showLocalTable = this.stateUrl === '/book-local-table';
   }
 }
