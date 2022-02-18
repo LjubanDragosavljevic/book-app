@@ -28,19 +28,8 @@ export class BooksComponent implements OnInit {
       this.books = result.results.books;
     });
     this.stateUrl = this.stateService.current.url;
-    this.checkCards();
-    this.checkTable();
-    this.checkLocalTable();
-  }
-  checkCards() {
     this.showCards = this.stateUrl === '/book-card';
-  }
-
-  checkTable() {
     this.showTable = this.stateUrl === '/book-table';
-  }
-
-  checkLocalTable() {
     this.showLocalTable = this.stateUrl === '/book-local-table';
   }
 }

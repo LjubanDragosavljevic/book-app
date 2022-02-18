@@ -25,6 +25,8 @@ import {
 } from '../books/books.state';
 import { UIRouterModule } from '@uirouter/angular';
 import { uiRouterConfigCh } from '../router/router.config';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const MATERIAL_MODULES = [
   MatCardModule,
@@ -34,6 +36,8 @@ const MATERIAL_MODULES = [
   MatInputModule,
   MatAutocompleteModule,
   MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
 ];
 
 @NgModule({
