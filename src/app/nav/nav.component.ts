@@ -11,17 +11,17 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {}
   onCardClick() {
-    this.$state.go('books.book-card');
+    this.$state.go('books.book-card', {}, { reload: true });
     window.scrollTo(0, 0);
   }
 
   onBooktableClick() {
-    this.$state.go('books.book-table');
+    this.$state.go('books.book-table', {}, { reload: true });
     window.scrollTo(0, 0);
   }
 
   onBooklocalTableClick() {
-    this.$state.go('books.book-local-table');
+    this.$state.go('books.book-local-table', {}, { reload: true });
     window.scrollTo(0, 0);
   }
 }

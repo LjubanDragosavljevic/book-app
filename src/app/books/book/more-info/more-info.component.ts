@@ -25,12 +25,9 @@ export class MoreInfoComponent implements OnInit {
     if (this.stateService.params['obj'] === undefined) {
       this.booksService.getBooks().subscribe((result: GetBooksResponse) => {
         this.books = result.results.books;
-        console.log(this.books);
-        console.log(this.isbn);
         this.book = this.books.find(
           (book) => book.primary_isbn10 === this.isbn
         );
-        console.log(this.book);
       });
     }
   }
@@ -38,6 +35,6 @@ export class MoreInfoComponent implements OnInit {
   ngOnInit(): void {}
   ngAfterViewInit(): void {}
   onClose() {
-    this.$state.go('books');
+    this.$state.go('books.book-card');
   }
 }

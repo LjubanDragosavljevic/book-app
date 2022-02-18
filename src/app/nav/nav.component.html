@@ -3,11 +3,25 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item uiSref="home" class="mat-menu-btn">Home</button>
-    <button mat-menu-item uiSref="books" class="mat-menu-btn">Books</button>
-    <button mat-menu-item uiSref="books.book-card" class="mat-menu-btn">
+    <button
+      mat-menu-item
+      uiSref="home"
+      class="mat-menu-btn"
+      uiSrefActive="active"
+    >
+      Home
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="books" class="mat-menu-btn">
       Books
     </button>
+
+    <mat-menu #books="matMenu">
+      <button mat-menu-item (click)="onCardClick()">Book Card</button>
+      <button mat-menu-item (click)="onBooktableClick()">Table</button>
+      <button mat-menu-item (click)="onBooklocalTableClick()">
+        Local Table
+      </button>
+    </mat-menu>
   </mat-menu>
 </div>
 

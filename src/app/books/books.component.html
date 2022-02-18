@@ -3,7 +3,7 @@
     ><span class="title-center">Books</span>
 
     <!-- Search for book cards component -->
-    <form class="search-form">
+    <form class="search-form" [hidden]="!showCards">
       <mat-form-field class="search-form-full-width">
         <input
           matInput
@@ -25,16 +25,21 @@
   fxLayoutGap="1rem"
 >
   <!-- Book Cards component -->
-  <!-- <app-book
+
+  <app-book
     *ngFor="let book of books | search: searchText"
     [book]="book"
-  ></app-book> -->
+    [hidden]="!showCards"
+  >
+  </app-book>
 
   <!-- Table that is Table that gets data from api directly -->
-  <app-table></app-table>
+
+  <app-table [hidden]="!showTable"></app-table>
 
   <!-- Table that gets data fom input -->
-  <!-- <app-table-local [books]="books"></app-table-local> -->
+
+  <app-table-local [books]="books" [hidden]="!showLocalTable"></app-table-local>
 </div>
 
 <ng-template #loading>

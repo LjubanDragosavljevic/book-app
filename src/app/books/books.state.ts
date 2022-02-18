@@ -7,19 +7,31 @@ import { Ng2StateDeclaration } from '@uirouter/angular';
 export const bookCard: Ng2StateDeclaration = {
   name: 'books.book-card',
   url: '/books/book-card',
-  component: BookComponent,
+  views: {
+    bookCard: {
+      component: BookComponent,
+    },
+  },
 };
 
 export const bookTable: Ng2StateDeclaration = {
   name: 'books.book-table',
   url: '/books/book-table',
-  component: TableComponent,
+  views: {
+    bookTable: {
+      component: TableComponent,
+    },
+  },
 };
 
 export const bookLocalTable: Ng2StateDeclaration = {
   name: 'books.book-local-table',
   url: '/books/book-local-table',
-  component: TableLocalComponent,
+  views: {
+    bookLocalTable: {
+      component: TableLocalComponent,
+    },
+  },
 };
 export const moreInfoState: Ng2StateDeclaration = {
   name: 'books/more-info',
